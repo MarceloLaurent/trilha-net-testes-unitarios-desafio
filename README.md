@@ -2,7 +2,9 @@
 www.dio.me
 
 ## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de Testes Unitários com C#, da trilha .NET da DIO.
+Essa é a solução do desafio. Caso deseje testar seus conhecimentos e criar sua própria solução, segue o seu repositório:
+
+https://github.com/digitalinnovationone/trilha-net-testes-unitarios-desafio
 
 ## Contexto
 Você está trabalhando em um sistema, e seus gestores relataram que frequentemente há problemas no software: bugs, funcionalidades que estavam funcionando de repente não funcionam mais, problemas de validações, entre outros. Os clientes já começam a duvidar da qualidade do código.
@@ -28,11 +30,13 @@ Classe responsável por realizar diversas validações envolvendo listas.
 
 | Classe          | Método                       | Objetivo                                                                                                                |
 |---------------- |------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| ValidacoesLista | RemoverNumerosPositivos      | Recebe uma lista de números inteiros e retorna uma nova lista, apenas com os números negativos                          |
 | ValidacoesLista | RemoverNumerosNegativos      | Recebe uma lista de números inteiros e retorna uma nova lista, apenas com os números positivos                          |
 | ValidacoesLista | ListaContemDeterminadoNumero | Recebe uma lista de números inteiros e verifica se um determinado número está presente dentro dessa lista               |
 | ValidacoesLista | MultiplicarNumerosLista      | Recebe uma lista de números inteiros e retorna uma nova lista, com seus valores múltiplicados por um determinado número |
 | ValidacoesLista | RetornarMaiorNumeroLista     | Recebe uma lista de números inteiros e retorna o maior número entre eles                                                |
 | ValidacoesLista | RetornarMenorNumeroLista     | Recebe uma lista de números inteiros e retorna o menor número entre eles                                                |
+| ValidacoesLista | RertonarMediaAritmeticaLista     | Recebe uma lista de números inteiros e retorna a média aritmética dessa lista                                                |
 
 **Classe ValidacoesString**
 
@@ -76,6 +80,3 @@ O projeto está estruturado da seguinte maneira:
 
 ![Métodos Swagger](Imagens/projeto.png)
 
-
-## Solução
-O código de testes está pela metade, e você deverá dar continuidade implementando os testes descritos acima, para que no final, tenhamos um programa de testes funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.

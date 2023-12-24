@@ -7,6 +7,20 @@ public class ValidacoesListaTests
     private ValidacoesLista _validacoes = new ValidacoesLista();
 
     [Fact]
+    public void DeveRemoverNumerosPositivosDeUmaLista()
+    {
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var resultadoEsperado = new List<int> { -1, -8 };
+
+        // Act
+        var resultado = _validacoes.RemoverNumerosPositivos(lista);
+
+        // Assert
+        Assert.Equal(resultadoEsperado, resultado);
+    }
+
+    [Fact]
     public void DeveRemoverNumerosNegativosDeUmaLista()
     {
         // Arrange
@@ -85,6 +99,19 @@ public class ValidacoesListaTests
     }
 
     [Fact]
+    public void NaoDeveRetornar8ComoMaiorNumeroDaLista()
+    {
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+
+        // Act
+        var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
+
+        // Assert
+        Assert.NotEqual(8, resultado);
+    }
+
+    [Fact]
     public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
         //TODO: Implementar método de teste
@@ -99,5 +126,31 @@ public class ValidacoesListaTests
         
         // Assert
         Assert.Equal(-8, resultado);
+    }
+
+    [Fact]
+    public void NaoDeveRetornarUmNegativoComoMenorNumeroDaLista()
+    {
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+
+        // Act
+        var resultado = _validacoes.RetornarMenorNumeroLista(lista);
+        
+        // Assert
+        Assert.NotEqual(-1, resultado);
+    }
+
+    [Fact]
+    public void DeveRetornarDoisEMeioComoMediaAritmeticaLista()
+    {
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+
+        // Act
+        var resultado = _validacoes.RertonarMediaAritmeticaLista(lista);
+        
+        // Assert
+        Assert.NotEqual(2.5, resultado);
     }
 }

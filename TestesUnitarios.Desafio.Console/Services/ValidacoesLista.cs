@@ -2,6 +2,13 @@ namespace TestesUnitarios.Desafio.Console.Services
 {
     public class ValidacoesLista
     {
+        public List<int> RemoverNumerosPositivos(List<int> lista)
+        {
+            var listaSemPositivos = lista.Where(x => x < 0);
+            return listaSemPositivos.ToList();
+        }
+
+        
         public List<int> RemoverNumerosNegativos(List<int> lista)
         {
             var listaSemNegativos = lista.Where(x => x > 0);
@@ -28,6 +35,11 @@ namespace TestesUnitarios.Desafio.Console.Services
         public int RetornarMenorNumeroLista(List<int> lista)
         {
             return lista.Min();
+        }
+
+        public double RertonarMediaAritmeticaLista(List<int> lista)
+        {
+            return lista.Average();
         }
     }
 }
